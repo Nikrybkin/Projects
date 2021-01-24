@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Axit</title>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+<!-- Sprite -->
+        <svg style="display: none;">
+            
+            <symbol id="facebook" viewBox="0 0 24 24">
+                <g>
+                    <path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/>
+                </g>
+            </symbol>
+
+            <symbol id="twitter" viewBox="0 0 512 512">
+                <g>
+                    <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+                        c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+                        c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+                        c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+                        c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+                        c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+                        C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+                        C480.224,136.96,497.728,118.496,512,97.248z"/>
+                </g>
+            </symbol>
+
+            <symbol id="google" viewBox="0 0 604.35 604.35">
+                <g>
+                    <path d="M516.375,255v-76.5h-51V255h-76.5v51h76.5v76.5h51V306h76.5v-51H516.375z M320.025,341.7l-28.051-20.4
+			c-10.2-7.649-20.399-17.85-20.399-35.7s12.75-33.15,25.5-40.8c33.15-25.5,66.3-53.55,66.3-109.65c0-53.55-33.15-84.15-51-99.45
+			h43.35l30.6-35.7h-158.1c-112.2,0-168.3,71.4-168.3,147.9c0,58.65,45.9,122.4,127.5,122.4h20.4c-2.55,7.65-10.2,20.4-10.2,33.15
+			c0,25.5,10.2,35.7,22.95,51c-35.7,2.55-102,10.2-150.45,40.8c-45.9,28.05-58.65,66.3-58.65,94.35
+			c0,58.65,53.55,114.75,168.3,114.75c137.7,0,204.001-76.5,204.001-150.449C383.775,400.35,355.725,372.3,320.025,341.7z
+			 M126.225,109.65c0-56.1,33.15-81.6,68.85-81.6c66.3,0,102,89.25,102,140.25c0,66.3-53.55,79.05-73.95,79.05
+			C159.375,247.35,126.225,168.3,126.225,109.65z M218.024,568.65c-84.15,0-137.7-38.25-137.7-94.351c0-56.1,51-73.95,66.3-81.6
+			c33.15-10.2,76.5-12.75,84.15-12.75s12.75,0,17.85,0c61.2,43.35,86.7,61.2,86.7,102C335.324,530.4,286.875,568.65,218.024,568.65z
+			"/>
+                </g>
+            </symbol>
+
+            <symbol id="pinterest" viewBox="0 0 511.957 511.957">
+                <g>
+                    <path d="M255.987,0C114.846,0,0.013,114.833,0.013,255.983c0,101.581,60.143,193.596,153.216,234.428l12.51,5.487l-0.555-13.636
+			c-0.845-21.077,0.529-39.415,4.079-54.494c4.77-20.13,31.838-134.878,31.838-134.878l0.691-3.012l-1.348-2.748
+			c-0.077-0.145-7.031-14.515-7.031-35.319c0-31.13,17.229-55.509,39.219-55.509c23.04,0,24.832,21.888,24.832,28.595
+			c0,13.099-5.649,31.386-11.622,50.739c-3.558,11.511-7.236,23.415-9.993,35.098c-3.456,14.609-0.495,28.809,8.337,39.979
+			c9.131,11.546,23.339,18.159,38.98,18.159c49.596,0,86.989-60.22,86.989-140.083c0-62.763-43.759-103.322-111.479-103.322
+			c-74.3,0-130.33,54.596-130.33,127.01c0,21.777,5.99,39.45,18.33,54.067c1.988,2.33,2.33,3.072,2.364,3.157
+			c0.017,0.102,0.034,0.717-0.597,3.021l-0.614,2.466c-1.306,5.231-3.396,13.619-4.369,17.289c-0.085,0.316-0.171,0.546-0.196,0.683
+			c-0.179-0.034-0.418-0.102-0.717-0.23c-28.817-11.733-45.346-43.307-45.346-86.613c0-100.736,98.423-146.039,168.32-146.039
+			c92.723,0,148.13,67.729,148.13,133.222c0,94.822-51.405,161.05-125.005,161.05c-24.499,0-46.123-13.346-52.881-26.24
+			l-10.368-19.797l-5.47,21.666c-0.136,0.572-14.396,57.054-17.348,67.814c-4.122,14.942-12.39,32.486-23.893,50.731l-6.016,9.54
+			l10.812,3.2c23.526,6.955,47.923,10.496,72.508,10.496c141.133,0,255.957-114.833,255.957-255.974
+			C511.945,114.833,397.12,0,255.987,0z"/>
+                </g>
+            </symbol>
+
+            <symbol id="instagram"  viewBox="0 0 512 512">
+                <g>
+                    <path d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192c88.352,0,160-71.648,160-160V160
+			C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112V160C48,98.24,98.24,48,160,48
+			h192c61.76,0,112,50.24,112,112V352z"/><path d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128S326.688,128,256,128z M256,336
+			c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80C336,300.096,300.096,336,256,336z"/><circle cx="393.6" cy="118.4" r="17.056"/>
+                </g>
+            </symbol>
+
+            <symbol id="vk"  viewBox="0 0 511.962 511.962">
+                <g>
+                    <path d="M507.399,370.471c-1.376-2.304-9.888-20.8-50.848-58.816c-42.88-39.808-37.12-33.344,14.528-102.176
+			c31.456-41.92,44.032-67.52,40.096-78.464c-3.744-10.432-26.88-7.68-26.88-7.68l-76.928,0.448c0,0-5.696-0.768-9.952,1.76
+			c-4.128,2.496-6.784,8.256-6.784,8.256s-12.192,32.448-28.448,60.032c-34.272,58.208-48,61.28-53.6,57.664
+			c-13.024-8.416-9.76-33.856-9.76-51.904c0-56.416,8.544-79.936-16.672-86.016c-8.384-2.016-14.528-3.36-35.936-3.584
+			c-27.456-0.288-50.72,0.096-63.872,6.528c-8.768,4.288-15.52,13.856-11.392,14.4c5.088,0.672,16.608,3.104,22.72,11.424
+			c7.904,10.72,7.616,34.848,7.616,34.848s4.544,66.4-10.592,74.656c-10.4,5.664-24.64-5.888-55.2-58.72
+			c-15.648-27.04-27.488-56.96-27.488-56.96s-2.272-5.568-6.336-8.544c-4.928-3.616-11.84-4.768-11.84-4.768l-73.152,0.448
+			c0,0-10.976,0.32-15.008,5.088c-3.584,4.256-0.288,13.024-0.288,13.024s57.28,133.984,122.112,201.536
+			c59.488,61.92,127.008,57.856,127.008,57.856h30.592c0,0,9.248-1.024,13.952-6.112c4.352-4.672,4.192-13.44,4.192-13.44
+			s-0.608-41.056,18.464-47.104c18.784-5.952,42.912,39.68,68.48,57.248c19.328,13.28,34.016,10.368,34.016,10.368l68.384-0.96
+			C488.583,400.807,524.359,398.599,507.399,370.471z"/>
+                </g>
+            </symbol>
+
+            <symbol id="spotify"  viewBox="0 0 24 24">
+                <g>
+                    <path d="m12 24c6.624 0 12-5.376 12-12s-5.376-12-12-12-12 5.376-12 12 5.376 12 12 12zm4.872-6.344v.001c-.807 0-3.356-2.828-10.52-1.36-.189.049-.436.126-.576.126-.915 0-1.09-1.369-.106-1.578 3.963-.875 8.013-.798 11.467 1.268.824.526.474 1.543-.265 1.543zm1.303-3.173c-.113-.03-.08.069-.597-.203-3.025-1.79-7.533-2.512-11.545-1.423-.232.063-.358.126-.576.126-1.071 0-1.355-1.611-.188-1.94 4.716-1.325 9.775-.552 13.297 1.543.392.232.547.533.547.953-.005.522-.411.944-.938.944zm-13.627-7.485c4.523-1.324 11.368-.906 15.624 1.578 1.091.629.662 2.22-.498 2.22l-.001-.001c-.252 0-.407-.063-.625-.189-3.443-2.056-9.604-2.549-13.59-1.436-.175.048-.393.125-.625.125-.639 0-1.127-.499-1.127-1.142 0-.657.407-1.029.842-1.155z"/>
+                </g>
+            </symbol>
+
+            <symbol id="up"  viewBox="0 0 512.056 512.056">
+                <g>
+                    <path d="M426.635,188.224C402.969,93.946,307.358,36.704,213.08,60.37C139.404,78.865,85.907,142.542,80.395,218.303
+                        C28.082,226.93-7.333,276.331,1.294,328.644c7.669,46.507,47.967,80.566,95.101,80.379h80v-32h-80c-35.346,0-64-28.654-64-64
+                        c0-35.346,28.654-64,64-64c8.837,0,16-7.163,16-16c-0.08-79.529,64.327-144.065,143.856-144.144
+                        c68.844-0.069,128.107,48.601,141.424,116.144c1.315,6.744,6.788,11.896,13.6,12.8c43.742,6.229,74.151,46.738,67.923,90.479
+                        c-5.593,39.278-39.129,68.523-78.803,68.721h-64v32h64c61.856-0.187,111.848-50.483,111.66-112.339
+                        C511.899,245.194,476.655,200.443,426.635,188.224z"/>
+                    <path d="M245.035,253.664l-64,64l22.56,22.56l36.8-36.64v153.44h32v-153.44l36.64,36.64l22.56-22.56l-64-64
+                        C261.354,247.46,251.276,247.46,245.035,253.664z"/>
+                </g>
+            </symbol>
+
+            <symbol id="down"  viewBox="0 0 512.056 512.056">
+                <g>
+                    <path d="M426.635,164.217C402.969,69.94,307.358,12.698,213.08,36.364C139.404,54.858,85.907,118.535,80.395,194.297
+                        c-52.313,8.627-87.728,58.028-79.101,110.341c7.669,46.507,47.967,80.566,95.101,80.379h64v-32h-64c-35.346,0-64-28.654-64-64
+                        c0-35.346,28.654-64,64-64c8.837,0,16-7.163,16-16c-0.08-79.529,64.327-144.065,143.856-144.144
+                        c68.844-0.069,128.107,48.601,141.424,116.144c1.315,6.744,6.788,11.896,13.6,12.8c43.742,6.229,74.151,46.738,67.923,90.479
+                        c-5.593,39.278-39.129,68.523-78.803,68.721h-48v32h48c61.856-0.187,111.848-50.483,111.66-112.339
+                        C511.899,221.187,476.655,176.437,426.635,164.217z"/>
+                    <path d="M272.395,426.457v-153.44h-32v153.44l-36.64-36.64l-22.56,22.56l64,64c6.241,6.204,16.319,6.204,22.56,0l64-64
+                        l-22.56-22.56L272.395,426.457z"/>
+                </g>
+            </symbol>
+
+        </svg><!--sprite-->        
+
+<!-- Header -->
+        <header class="header" id="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__logo">
+                        <img src="assets/images/axit-logo.png" alt="">
+                    </div>
+                    <nav class="nav" id="nav">
+                        <a class="nav__link" href="#" data-scroll="#tab">About</a>
+                        <a class="nav__link" href="#" data-scroll="#options">Pricing</a>
+                        <a class="nav__link" href="#" data-scroll="#what">Reviews</a>
+                        <a class="nav__link" href="#" data-scroll="#contact">Contact</a>
+                    </nav>
+
+                    <button class="burger" type="button" id="navToggle">
+                        <span class="burger__item">Menu</span>
+                    </button>
+
+                </div>
+            </div>
+        </header><!--header-->
+
+<!-- Intro -->
+        <div class="intro" id="intro">
+            <div class="container">
+                <div class="intro__content">
+                    <div class="intro__logo">
+                        <img src="assets/images/axit-logo-intro.png" alt="">
+                    </div>
+                    <h1 class="intro__title">MODERN AXURE TEMPLATE FOR BEAUTIFUL PROTOTYPES </h1>
+                    <div class="intro__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. </div>
+                    <a class="btn" href="#">Download</a>                  
+                </div> 
+                <div class="intro__start">
+                    <div class="start__block">
+                        <h2 class="start__title">Try Your <span class="start__free">FREE </span> Trial Today</h2>
+                        <form class="input__intro" action="/" method="post">
+                            <input class="input__name" type="text" name="name" placeholder="Name">
+                            <input class="input__email" type="email" name="email" placeholder="Email">  
+                            <input class="input__password" type="password" name="password" placeholder="Password">                             
+                        </form>
+                        
+                        <form class="button__intro" action="/" method="post">
+                            <button class="start__button" type="submit">Get Started</button> 
+                        </form>
+
+                    </div> 
+                </div>
+            </div>
+        </div><!--intro-->
+
+<!-- Media -->
+        <div class="media">
+            <div class="media__shadow">
+                <div class="container">
+                    <div class="media__inner">
+                        <div class="media__content">
+                            <h2 class="media__title">Social Media</h2>
+                            <div class="media__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</div>
+                        </div>    
+                        <div class="media__contact">
+                            <a class="media__item" href="https:/facebook.com" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            <a class="media__item" href="https:/twitter.com" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a class="media__item" href="https:/google.com" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#google"></use>
+                                </svg>
+                            </a>
+                            <a class="media__item" href="https:/pinterest.com" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#pinterest"></use>
+                                </svg>
+                            </a>
+                            <a class="media__item" href="https:/instagram.com" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#instagram"></use>
+                                </svg>
+                            </a>
+                            <a class="media__item" href="https:/vk.com" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#vk"></use>
+                                </svg>
+                            </a>
+                            <a class="media__item" href="https:/spotify.com" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#spotify"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div><!--media-->             
+
+<!-- Tab -->   
+        <div class="tab" id="tab">
+            <div class="container">
+                <div class="tab__inner">
+                    <div class="tab__column">
+                        <button class="column-1" type="button" data-tab="#tab_1">
+                            <div class="text-1">Tab 1</div>
+                        </button>
+                        <button class="column-1 center" type="button" data-tab="#tab_2">
+                            <div class="text-2">Tab 2</div>
+                        </button>
+                        <button class="column-1 last" type="button" data-tab="#tab_3">
+                            <div class="text-3">Tab 3</div>
+                        </button>
+                    </div>
+
+                    <div class="tab__content">
+                            
+                            <div class="tab__suptitle" id="tab_1"><h2 class="h2">Tabs with soft transitioning effect.</h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes. <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p></div>
+                         
+                            <div class="tab__suptitle" id="tab_2"><h2 class="h2">Lorem ipsum dolor sit amet.</h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</div>
+                
+                            <div class="tab__suptitle" id="tab_3"><h2 class="h2" >Consectetur adipiscing elit.</h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.
+                            </div>
+                           
+                            <a class="btn__tab"href="#">Download<a>                       
+                    </div>
+                    <div class="tab__photo">
+                        <img class="tab__img" src="assets/images/tab.png" alt="">
+                    </div>
+                </div>    
+            </div>
+        </div><!--tab-->
+  
+<!-- Sub -->        
+<div class="sub">
+    <div class="container">
+        <div class="sub__inner">
+            <div class="sub__photo">
+                <img class="standard__img" src="assets/images/sub.png" alt="">
+            </div>
+
+            <div class="sub__content">
+                    <div class="sub__title">Sub list section</div>
+                    <div class="sub__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p></div>
+
+                    <a class="sub__item" href="">
+                        <svg class="sub__icon">
+                            <use xlink:href="#up"></use>
+                        </svg>
+                    </a>    
+                    <h2 class="sub__uptitle">Title</h2>
+                    <h2 class="text__uptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</h2>
+
+                    <a class="sub__item" href="">
+                        <svg class="sub__icon">
+                            <use xlink:href="#down"></use>
+                        </svg>
+                    </a>    
+                    <h2 class="sub__uptitle">Title</h2>
+                    <h2 class="text__uptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</h2>            
+            </div>
+            
+        </div>
+    </div>
+</div><!--sub-->
+        
+<!-- Standard -->
+        <div class="standard">
+            <div class="container">
+                <div class="standard__inner">
+                    <div class="standard__content">
+                        <div class="standard__title">Standard Picture Section</div>
+                        <div class="standard__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes. <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p></div>
+                    </div>
+                    <div class="standard__photo">
+                        <img class="standard__img" src="assets/images/standard.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div><!--standard-->
+
+<!-- Why -->
+        <div class="why">
+            <div class="container">
+                <div class="why__inner">
+                    <h2 class="general__title">Why This Is Awesome</h2>
+                    <div class="general__suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+                    <div class="why__type">
+                        <div class="type-1">
+                            <img class="why__icon" src="assets/images/why/lamp.png" alt="">
+                            <div class="type__title">Thoughtful Design</div>
+                            <div class="type__suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra.</div>
+                        </div>
+                        <div class="type-2">
+                            <img class="why__icon" src="assets/images/why/keyboard.png" alt="">
+                            <div class="type__title">Well Crafted</div>
+                            <div class="type__suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra.</div>
+                        </div>
+                        <div class="type-3">
+                            <img class="why__icon" src="assets/images/why/volt.png" alt="">
+                            <div class="type__title">Easy to Customize</div>
+                            <div class="type__suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--why-->
+
+
+<!-- Options -->
+        <div class="options" id="options">
+            <div class="container">
+                <div class="options__inner">
+                    <h2 class="general__title">PRICING OPTIONS</h2>
+                    <div class="general__suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+                    <div class="options__basic">
+                        
+                            <div class="basic">
+                                <div class="basic__title">
+                                    <h2 class="basic__text">Basic</h2>
+                                </div>
+                                <div class="basic__suptitle">
+                                    <h2 class="basic__price">$<span class="span__price">0</span></h2>
+                                    <div class="basic__free">Free for Life</div>
+                                </div>
+
+                                <div class="basic__info">
+                                    <div class="info__text">1 gb of space</div>
+                                </div>
+                                <div class="basic__info">
+                                    <div class="info__text">10 gb of bandwidth</div>
+                                </div>
+                                <div class="basic__info">
+                                    <div class="info__text">3 websites</div>
+                                </div>
+                                <div class="basic__info">
+                                    <div class="info__text">Basic Customization</div>
+                                </div>
+                                <div class="basic__info">
+                                    <div class="info__text">wordpress integration</div>
+                                </div>
+                                <div class="basic__info">
+                                    <div class="info__text">email support</div>
+                                </div>
+                            </div><!--basic-->
+
+                            <div class="professional">
+                                <div class="basic__title">
+                                    <h2 class="basic__text">Professional</h2>
+                                </div>
+                                <div class="basic__suptitle">
+                                    <h2 class="basic__price">$<span class="span__price">19</span></h2>
+                                    <div class="basic__free">Monthly Payment</div>
+                                </div>
+
+                                <div class="basic__info">
+                                    <div class="info__text">our most popular</div>
+                                </div>
+                                <div class="basic__info">
+                                    <div class="info__text">5 gb of space</div>
+                                </div>
+                                <div class="basic__info">
+                                    <div class="info__text">50 gb of bandwidth</div>
+                                </div>
+                                <div class="basic__info">
+                                    <div class="info__text">12 websites</div>
+                                </div>
+                                <div class="basic__info">
+                                    <div class="info__text">Advanced Customization</div>
+                                </div>
+                                <div class="basic__info">
+                                    <div class="info__text">wordpress integration</div>
+                                </div>
+                                <div class="basic__info">
+                                    <div class="info__text">email support</div>
+                                </div>
+                            </div><!--professional-->
+
+                            <div class="enterprise">
+                                <div class="basic__title">
+                                    <h2 class="basic__text">Enterprise</h2>
+                                </div>
+                                <div class="basic__suptitle">
+                                    <h2 class="basic__price">$<span class="span__price">70</span></h2>
+                                    <div class="basic__free">Monthly Payment</div>
+                                </div>
+
+                                <div class="basic__info">
+                                    <div class="info__text">Unlimited space</div>
+                                </div>
+                                <div class="basic__info">
+                                    <div class="info__text">unlimited bandwidth</div>
+                                </div>
+                                <div class="basic__info">
+                                    <div class="info__text">100 websites</div>
+                                </div>
+                                <div class="basic__info">
+                                    <div class="info__text">Basic Customization</div>
+                                </div>
+                                <div class="basic__info">
+                                    <div class="info__text">wordpress integration</div>
+                                </div>
+                                <div class="basic__info">
+                                    <div class="info__text">24/7 customer support</div>
+                                </div>
+                            </div><!--enterprise-->
+                           
+                    </div>
+                </div>
+            </div>
+        </div><!--options-->        
+
+<!-- What -->
+        <div class="what" id="what">
+            <div class="container">
+                <div class="what__inner">
+                        <h2 class="general__title">WHAT OUR CUSTOMERS ARE SAYING</h2>
+                        <div class="general__suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            
+                        
+                    
+                        <div class="what__column">
+
+                            
+                            <div class="reviewsSlider" id="reviewsSlider">
+                                
+                                    <div class="message__block">
+                                        <div class="message__content">
+                                            <div class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex, architecto eaque quo suscipit.</div>
+                                        </div>
+                                        <div class="message__people">
+                                            <div class="people">
+                                                <img class="people__img" src="assets/images/what/avatar.png" alt="">
+                                                <div class="people__text">
+                                                    <div class="people__name">Alex M.</div>
+                                                    <div class="people__prof">Freelancer</div>        
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="message__block">
+                                        <div class="message__content">
+                                            <div class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex, architecto eaque quo suscipit.</div>
+                                        </div>
+                                        <div class="message__people">
+                                            <div class="people">
+                                                <img class="people__img" src="assets/images/what/avatar.png" alt="">
+                                                <div class="people__text">
+                                                    <div class="people__name">Dima M.</div>
+                                                    <div class="people__prof">Freelancer</div>        
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="message__block">
+                                        <div class="message__content">
+                                            <div class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similiqu odio aspernatur ex, architecto eaque quo suscipit.</div>
+                                        </div>
+                                        <div class="message__people">
+                                            <div class="people">
+                                                <img class="people__img" src="assets/images/what/avatar.png" alt="">
+                                                <div class="people__text">
+                                                    <div class="people__name">Mikle M.</div>
+                                                    <div class="people__prof">Freelancer</div>        
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+
+               
+                                    <div class="message__block">
+                                        <div class="message__content">
+                                            <div class="message__text">Lorem ipsum dolor sit amet, 
+                                                consectetur adipisicing elit. Doloribus 
+                                                accusamus expedita repellat similique 
+                                                odio aspernatur ex, architecto eaque 
+                                                quo suscipit.</div>
+                                        </div>
+                                        <div class="message__people">
+                                            <div class="people">
+                                                <img class="people__img" src="assets/images/what/avatar.png" alt="">
+                                                <div class="people__text">
+                                                    <div class="people__name">Alex M.</div>
+                                                    <div class="people__prof">Freelancer</div>        
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="message__block">
+                                        <div class="message__content">
+                                            <div class="message__text">Lorem ipsum dolor sit amet, 
+                                                consectetur adipisicing elit. Doloribus 
+                                                accusamus expedita repellat similique 
+                                                odio aspernatur ex, architecto eaque 
+                                                quo suscipit.</div>
+                                        </div>
+                                        <div class="message__people">
+                                            <div class="people">
+                                                <img class="people__img" src="assets/images/what/avatar.png" alt="">
+                                                <div class="people__text">
+                                                    <div class="people__name">Alex M.</div>
+                                                    <div class="people__prof">Freelancer</div>        
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="message__block">
+                                        <div class="message__content">
+                                            <div class="message__text">Lorem ipsum dolor sit amet, 
+                                                consectetur adipisicing elit. Doloribus 
+                                                accusamus expedita repellat similique 
+                                                odio aspernatur ex, architecto eaque 
+                                                quo suscipit.</div>
+                                        </div>
+                                        <div class="message__people">
+                                            <div class="people">
+                                                <img class="people__img" src="assets/images/what/avatar.png" alt="">
+                                                <div class="people__text">
+                                                    <div class="people__name">Alex M.</div>
+                                                    <div class="people__prof">Freelancer</div>        
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="message__block">
+                                        <div class="message__content">
+                                            <div class="message__text">Lorem ipsum dolor sit amet, 
+                                                consectetur adipisicing elit. Doloribus 
+                                                accusamus expedita repellat similique 
+                                                odio aspernatur ex, architecto eaque 
+                                                quo suscipit.</div>
+                                        </div>
+                                        <div class="message__people">
+                                            <div class="people">
+                                                <img class="people__img" src="assets/images/what/avatar.png" alt="">
+                                                <div class="people__text">
+                                                    <div class="people__name">Alex M.</div>
+                                                    <div class="people__prof">Freelancer</div>        
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="message__block">
+                                        <div class="message__content">
+                                            <div class="message__text">Lorem ipsum dolor sit amet, 
+                                                consectetur adipisicing elit. Doloribus 
+                                                accusamus expedita repellat similique 
+                                                odio aspernatur ex, architecto eaque 
+                                                quo suscipit.</div>
+                                        </div>
+                                        <div class="message__people">
+                                            <div class="people">
+                                                <img class="people__img" src="assets/images/what/avatar.png" alt="">
+                                                <div class="people__text">
+                                                    <div class="people__name">Alex M.</div>
+                                                    <div class="people__prof">Freelancer</div>        
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="message__block">
+                                        <div class="message__content">
+                                            <div class="message__text">Lorem ipsum dolor sit amet, 
+                                                consectetur adipisicing elit. Doloribus 
+                                                accusamus expedita repellat similique 
+                                                odio aspernatur ex, architecto eaque 
+                                                quo suscipit.</div>
+                                        </div>
+                                        <div class="message__people">
+                                            <div class="people">
+                                                <img class="people__img" src="assets/images/what/avatar.png" alt="">
+                                                <div class="people__text">
+                                                    <div class="people__name">Alex M.</div>
+                                                    <div class="people__prof">Freelancer</div>        
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                            </div>    
+
+                        </div><!--what__column-->
+
+                </div><!--what__inner-->      
+            </div>
+        </div><!--what-->
+               
+
+<!-- Stylish -->        
+        <div class="stylish">
+            <div class="container">
+                <div class="stylish__inner">
+                    <div class="stylish__title">STYLISH AXURE DESIGN</div>
+                    <div class="stylish__suptitle">Use the sections you need, remove the ones you don't.  Create gorgeous prototypes faster than ever!</div>
+                    <a class="btn" href="#">Download</a>  
+                </div>
+
+            </div>
+        </div><!--stylish-->
+
+<!-- Contact -->
+        <div class="contact" id="contact">
+            <div class="container">
+                <div class="contact__inner">
+                    <div class="general__title">CONTACT US</div>
+                    <div class="general__suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    <div class="contact__column">
+                    <div class="contact__left">
+                        <form class="contact__intro" action="/" method="post">                      
+                            <input class="contact__name" maxlength="40" type="text" name="name" placeholder="Name">
+                            <input class="contact__email" maxlength="40" type="email" name="email" placeholder="Email">  
+                            <input class="contact__subject" maxlength="40" type="text" name="Subject" placeholder="Subject" cols="92" rows="15" tabindex="101">                             
+                        </form>
+                    </div>
+                    <div class="contact__right">
+                        <textarea class="textarea" wrap="on" placeholder="Message"></textarea>
+                    </div>        
+                    </div>     
+                    
+                    <form class="button__contact" action="/" method="post">
+                        <button class="btn__contact"  type="submit">Send Message</button>  
+                    </form>
+        
+                
+                </div>
+            </div>
+        </div><!--contact-->        
+
+<!-- Footer -->        
+        <div class="footer">
+            <div class="container">
+                <div class="footer__innner">
+                    <div class="footer__icon">
+                        <a class="footer__item" href="https:/facebook.com" target="_blank">
+                            <svg class="footer__social">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__item" href="https:/twitter.com" target="_blank">
+                            <svg class="footer__social">
+                                <use xlink:href="#twitter"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__item" href="https:/google.com" target="_blank">
+                            <svg class="footer__social">
+                                <use xlink:href="#google"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__item" href="https:/pinterest.com" target="_blank">
+                            <svg class="footer__social">
+                                <use xlink:href="#pinterest"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__item" href="https:/instagram.com" target="_blank">
+                            <svg class="footer__social">
+                                <use xlink:href="#instagram"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__item" href="https:/vk.com" target="_blank">
+                            <svg class="footer__social">
+                                <use xlink:href="#vk"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__item" href="https:/spotify.com" target="_blank">
+                            <svg class="footer__social">
+                                <use xlink:href="#spotify"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                    
+                    <a class="placeholder" href="https://freebiesbug.com/psd-freebies/axit-psd-landing-page/" target="_blank" >© 2015 Axure Themes</a>
+
+                </div>
+            </div>
+        </div><!--footer-->
+
+<!-- JavaScript -->        
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="assets/js/app.js"></script><!--script-->            
+
+    </body>
+</html>
