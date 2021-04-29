@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="49" viewBox="0 0 36 49">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="crop" width="36" height="49" transform="translate(0 4.901)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Vector_Smart_Object" data-name="Vector Smart Object" transform="translate(0 -4.901)" clip-path="url(#clip-path)">
+    <path fill="#e84c3d" id="Контур_42" data-name="Контур 42" d="M18.239,4.9,0,8.429V34.791c0,6.369,5.472,14.6,18.239,19.11,12.769-4.507,18.239-12.741,18.239-19.11V8.429ZM34.56,34.791c0,5.487-5.089,12.837-16.321,17.05C7.007,47.627,1.919,40.277,1.919,34.791v-24.7L18.239,6.859,34.56,10Z"/>
+    <path fill="#e84c3d" id="Контур_43" data-name="Контур 43" d="M19.8,29.521H8.284V31.48H21.719V11.967H19.8Z"/>
+  </g>
+</svg>
