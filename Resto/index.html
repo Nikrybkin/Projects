@@ -1,0 +1,602 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" initial-scale=1>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>The Hatch</title>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header class="header" id="header">
+            <div class="container">
+                <div class="header-inner">
+                    <div class="header-logo">
+                        <img class="header-logo-img" src="assets/img/header/logo.png" alt="">
+                    </div>
+                    <nav class="nav" id="nav">
+                        <a class="nav-link" href="#" data-scroll="#intro" >Ресторан</a>
+                        <span class="nav-span">&#149;</span>
+                        <a class="nav-link" href="#" data-scroll="#menu" >Меню</a>
+                        <span class="nav-span">&#149;</span>
+                        <a class="nav-link" href="#" data-scroll="#map" >Адреса</a>
+                        <span class="nav-span">&#149;</span>
+                        <a class="nav-link" href="#" data-scroll="#footer" >Новости</a>
+                    </nav>
+
+                    <button class="nav-toggle" type="button" id="navToggle">
+                        <span class="nav-toggle-item">Menu</span>
+                    </button>
+                </div>
+            </div>
+        </header><!-- /.header -->
+
+        <!-- Intro -->
+        <main class="intro" id="intro">
+            <div class="container">
+                <div class="intro-inner">
+                    <div class="intro-logo">
+                        <img src="assets/img/intro/intro-logo.png" alt="">
+                    </div>
+                    <div class="intro-title">Hatch Meat</div>
+                    <div class="intro-figure">
+                        <img src="assets/img/intro/intro-icon.png" alt="">
+                    </div>
+                    <div class="intro-text">
+                        <p>Ресторан может быть респектабельным или демократичным, все равно самое дорогое в нем — атмосфера, которая появляется из тонкого, почти мистического сочетания ингредиентов: место-идея-еда-обстановка-люди-любовь... </p>
+                    </div>
+                </div>
+            </div>
+        </main><!-- /.main -->
+
+
+        <!-- Season -->
+        <div class="season" id="season">
+            <div class="container">
+                <div class="season-inner">
+                    <div class="season-block">
+                        <fieldset>
+                            <legend class="season-title" align="center">Окрошка мясная</legend>
+                            <div class="season-text">Окрошка – популярное блюдо русской кухни. Его название происходит от слова «крошить». Мелко нарезанные свежие овощи, залитые холодным квасом с добавлением мелко струганного мяса.</div>
+                            <div class="season-info">
+                            <div class="season-price">360, - &#8381</div>
+                            <div class="season-portion">250г/250 ккал.</div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.season-1 -->
+
+        <!-- Menu -->
+        <div class="menu" id="menu">
+            <div class="container">
+                <div class="menu-inner">
+                    <h1 class="menu-title">Меню</h1>
+                    <div class="menu-text">От нас невозможно уйти голодным. К вашим услугам лучший шеф-повар Москвы.</div>
+
+
+                    <div class="menu-categories active" data-collapse="#menu1">
+                        <div class="menu-categories-name">
+                            <img class="menu-categories-svg" src="assets/img/menu/1.png" alt="">
+                            <div class="menu-categories-title">Горячие закуски</div>
+                        </div>
+
+                        <div class="menu-categories-block" id="menu1">
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-1.jpg" alt="">
+                                    <h1 class="menu-categories-title">Тарелка свежих овощей с чесночно-творожным соусом</h1>
+                                    <div class="menu-categories-text">Сладкий перец,томаты, огурцы, зеленые перья лука, зелень, стебли сельдерея
+                                        </div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">210, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-2.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сырные пятачки из собственной сыровани</h1>
+                                    <div class="menu-categories-text">В пряном масле с вялеными томатами и травами</div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">350, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-3.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сыр из собственной сыроварни</h1>
+                                    <div class="menu-categories-text">Приготовленный по старинному кавказскому рецепту, подается на пергаменте со сладкой горчицей</div>
+                                    <div class="menu-categories-portion">50г/90 ккал.	</div>
+                                    <div class="menu-categories-price">150, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-4.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сало трёх видов с хреном и горчицей</h1>
+                                    <div class="menu-categories-text">Сало в острой перечной обсыпке, с чесноком и сало собственного копчения.</div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">270, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+                        </div>
+                    </div>
+
+                    <div class="menu-categories" data-collapse="#menu2">
+                        <div class="menu-categories-name">
+                            <img class="menu-categories-svg" src="assets/img/menu/2.png" alt="">
+                            <div class="menu-categories-title">Пивные закуски</div>
+                        </div>
+
+
+                            <div class="menu-categories-block" id="menu2">
+                                <div class="menu-categories-flex">
+                                    <div class="menu-categories-column">
+                                        <img class="menu-categories-img" src="assets/img/menu/dish-1.jpg" alt="">
+                                        <h1 class="menu-categories-title">Тарелка свежих овощей с чесночно-творожным соусом</h1>
+                                        <div class="menu-categories-text">Сладкий перец,томаты, огурцы, зеленые перья лука, зелень, стебли сельдерея
+                                            </div>
+                                        <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                        <div class="menu-categories-price">210, — &#8381</div>
+                                    </div><!-- /.menu-categories-column -->
+
+                                    <div class="menu-categories-column">
+                                        <img class="menu-categories-img" src="assets/img/menu/dish-2.jpg" alt="">
+                                        <h1 class="menu-categories-title">Сырные пятачки из собственной сыровани</h1>
+                                        <div class="menu-categories-text">В пряном масле с вялеными томатами и травами</div>
+                                        <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                        <div class="menu-categories-price">350, — &#8381</div>
+                                    </div><!-- /.menu-categories-column -->
+
+                                    <div class="menu-categories-column">
+                                        <img class="menu-categories-img" src="assets/img/menu/dish-3.jpg" alt="">
+                                        <h1 class="menu-categories-title">Сыр из собственной сыроварни</h1>
+                                        <div class="menu-categories-text">Приготовленный по старинному кавказскому рецепту, подается на пергаменте со сладкой горчицей</div>
+                                        <div class="menu-categories-portion">50г/90 ккал.	</div>
+                                        <div class="menu-categories-price">150, — &#8381</div>
+                                    </div><!-- /.menu-categories-column -->
+
+                                    <div class="menu-categories-column">
+                                        <img class="menu-categories-img" src="assets/img/menu/dish-4.jpg" alt="">
+                                        <h1 class="menu-categories-title">Сало трёх видов с хреном и горчицей</h1>
+                                        <div class="menu-categories-text">Сало в острой перечной обсыпке, с чесноком и сало собственного копчения.</div>
+                                        <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                        <div class="menu-categories-price">270, — &#8381</div>
+                                    </div><!-- /.menu-categories-column -->
+                                </div>
+                            </div>
+
+                    </div><!-- /.menu-categories-2 -->
+
+                    <div class="menu-categories" data-collapse="#menu3">
+                        <div class="menu-categories-name">
+                            <img class="menu-categories-svg" src="assets/img/menu/3.png" alt="">
+                            <div class="menu-categories-title">Салаты</div>
+                        </div>
+
+                        <div class="menu-categories-block" id="menu3">
+                            <div class="menu-categories-flex">
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-1.jpg" alt="">
+                                    <h1 class="menu-categories-title">Тарелка свежих овощей с чесночно-творожным соусом</h1>
+                                    <div class="menu-categories-text">Сладкий перец,томаты, огурцы, зеленые перья лука, зелень, стебли сельдерея
+                                        </div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">210, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-2.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сырные пятачки из собственной сыровани</h1>
+                                    <div class="menu-categories-text">В пряном масле с вялеными томатами и травами</div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">350, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-3.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сыр из собственной сыроварни</h1>
+                                    <div class="menu-categories-text">Приготовленный по старинному кавказскому рецепту, подается на пергаменте со сладкой горчицей</div>
+                                    <div class="menu-categories-portion">50г/90 ккал.	</div>
+                                    <div class="menu-categories-price">150, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-4.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сало трёх видов с хреном и горчицей</h1>
+                                    <div class="menu-categories-text">Сало в острой перечной обсыпке, с чесноком и сало собственного копчения.</div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">270, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+                            </div>
+                        </div>
+                    </div><!-- /.menu-categories-3 -->
+
+                    <div class="menu-categories" data-collapse="#menu4">
+                        <div class="menu-categories-name">
+                            <img class="menu-categories-svg" src="assets/img/menu/4.png" alt="">
+                            <div class="menu-categories-title">Супы</div>
+                        </div>
+
+                        <div class="menu-categories-block" id="menu4">
+                            <div class="menu-categories-flex">
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-1.jpg" alt="">
+                                    <h1 class="menu-categories-title">Тарелка свежих овощей с чесночно-творожным соусом</h1>
+                                    <div class="menu-categories-text">Сладкий перец,томаты, огурцы, зеленые перья лука, зелень, стебли сельдерея
+                                        </div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">210, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-2.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сырные пятачки из собственной сыровани</h1>
+                                    <div class="menu-categories-text">В пряном масле с вялеными томатами и травами</div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">350, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-3.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сыр из собственной сыроварни</h1>
+                                    <div class="menu-categories-text">Приготовленный по старинному кавказскому рецепту, подается на пергаменте со сладкой горчицей</div>
+                                    <div class="menu-categories-portion">50г/90 ккал.	</div>
+                                    <div class="menu-categories-price">150, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-4.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сало трёх видов с хреном и горчицей</h1>
+                                    <div class="menu-categories-text">Сало в острой перечной обсыпке, с чесноком и сало собственного копчения.</div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">270, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+                            </div>
+                        </div>
+                    </div><!-- /.menu-categories-4 -->
+
+                    <div class="menu-categories" data-collapse="#menu5">
+                        <div class="menu-categories-name">
+                            <img class="menu-categories-svg" src="assets/img/menu/5.png" alt="">
+                            <div class="menu-categories-title">Мясо</div>
+                        </div>
+
+                        <div class="menu-categories-block" id="menu5">
+                            <div class="menu-categories-flex">
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-1.jpg" alt="">
+                                    <h1 class="menu-categories-title">Тарелка свежих овощей с чесночно-творожным соусом</h1>
+                                    <div class="menu-categories-text">Сладкий перец,томаты, огурцы, зеленые перья лука, зелень, стебли сельдерея
+                                        </div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">210, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-2.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сырные пятачки из собственной сыровани</h1>
+                                    <div class="menu-categories-text">В пряном масле с вялеными томатами и травами</div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">350, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-3.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сыр из собственной сыроварни</h1>
+                                    <div class="menu-categories-text">Приготовленный по старинному кавказскому рецепту, подается на пергаменте со сладкой горчицей</div>
+                                    <div class="menu-categories-portion">50г/90 ккал.	</div>
+                                    <div class="menu-categories-price">150, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-4.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сало трёх видов с хреном и горчицей</h1>
+                                    <div class="menu-categories-text">Сало в острой перечной обсыпке, с чесноком и сало собственного копчения.</div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">270, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+                            </div>
+                        </div>
+                    </div><!-- /.menu-categories-5 -->
+
+                    <div class="menu-categories" data-collapse="#menu6">
+                        <div class="menu-categories-name">
+                            <img class="menu-categories-svg" src="assets/img/menu/6.png" alt="">
+                            <div class="menu-categories-title">Гарниры</div>
+                        </div>
+
+                        <div class="menu-categories-block" id="menu6">
+                            <div class="menu-categories-flex">
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-1.jpg" alt="">
+                                    <h1 class="menu-categories-title">Тарелка свежих овощей с чесночно-творожным соусом</h1>
+                                    <div class="menu-categories-text">Сладкий перец,томаты, огурцы, зеленые перья лука, зелень, стебли сельдерея
+                                        </div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">210, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-2.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сырные пятачки из собственной сыровани</h1>
+                                    <div class="menu-categories-text">В пряном масле с вялеными томатами и травами</div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">350, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-3.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сыр из собственной сыроварни</h1>
+                                    <div class="menu-categories-text">Приготовленный по старинному кавказскому рецепту, подается на пергаменте со сладкой горчицей</div>
+                                    <div class="menu-categories-portion">50г/90 ккал.	</div>
+                                    <div class="menu-categories-price">150, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-4.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сало трёх видов с хреном и горчицей</h1>
+                                    <div class="menu-categories-text">Сало в острой перечной обсыпке, с чесноком и сало собственного копчения.</div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">270, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+                            </div>
+                        </div>
+                    </div><!-- /.menu-categories-6 -->
+
+                    <div class="menu-categories" data-collapse="#menu7">
+                        <div class="menu-categories-name">
+                            <img class="menu-categories-svg" src="assets/img/menu/7.png" alt="">
+                            <div class="menu-categories-title">Десерты</div>
+                        </div>
+
+                        <div class="menu-categories-block" id="menu7">
+                            <div class="menu-categories-flex">
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-1.jpg" alt="">
+                                    <h1 class="menu-categories-title">Тарелка свежих овощей с чесночно-творожным соусом</h1>
+                                    <div class="menu-categories-text">Сладкий перец,томаты, огурцы, зеленые перья лука, зелень, стебли сельдерея
+                                        </div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">210, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-2.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сырные пятачки из собственной сыровани</h1>
+                                    <div class="menu-categories-text">В пряном масле с вялеными томатами и травами</div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">350, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-3.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сыр из собственной сыроварни</h1>
+                                    <div class="menu-categories-text">Приготовленный по старинному кавказскому рецепту, подается на пергаменте со сладкой горчицей</div>
+                                    <div class="menu-categories-portion">50г/90 ккал.	</div>
+                                    <div class="menu-categories-price">150, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-4.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сало трёх видов с хреном и горчицей</h1>
+                                    <div class="menu-categories-text">Сало в острой перечной обсыпке, с чесноком и сало собственного копчения.</div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">270, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+                            </div>
+                        </div>
+                    </div><!-- /.menu-categories-7 -->
+
+                    <div class="menu-categories" data-collapse="#menu8">
+                        <div class="menu-categories-name">
+                            <img class="menu-categories-svg" src="assets/img/menu/8.png" alt="">
+                            <div class="menu-categories-title">Напитки</div>
+                        </div>
+
+                        <div class="menu-categories-block" id="menu8">
+                            <div class="menu-categories-flex">
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-1.jpg" alt="">
+                                    <h1 class="menu-categories-title">Тарелка свежих овощей с чесночно-творожным соусом</h1>
+                                    <div class="menu-categories-text">Сладкий перец,томаты, огурцы, зеленые перья лука, зелень, стебли сельдерея
+                                        </div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">210, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-2.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сырные пятачки из собственной сыровани</h1>
+                                    <div class="menu-categories-text">В пряном масле с вялеными томатами и травами</div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">350, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-3.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сыр из собственной сыроварни</h1>
+                                    <div class="menu-categories-text">Приготовленный по старинному кавказскому рецепту, подается на пергаменте со сладкой горчицей</div>
+                                    <div class="menu-categories-portion">50г/90 ккал.	</div>
+                                    <div class="menu-categories-price">150, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+
+                                <div class="menu-categories-column">
+                                    <img class="menu-categories-img" src="assets/img/menu/dish-4.jpg" alt="">
+                                    <h1 class="menu-categories-title">Сало трёх видов с хреном и горчицей</h1>
+                                    <div class="menu-categories-text">Сало в острой перечной обсыпке, с чесноком и сало собственного копчения.</div>
+                                    <div class="menu-categories-portion">220г/150 ккал.	</div>
+                                    <div class="menu-categories-price">270, — &#8381</div>
+                                </div><!-- /.menu-categories-column -->
+                            </div>
+                        </div>
+                    </div><!-- /.menu-categories-8 -->
+
+
+                </div>
+            </div>
+        </div><!-- /.menu -->
+
+
+
+        <!-- Season -->
+        <div class="season-2" id="season-2">
+            <div class="container">
+                <div class="season-inner">
+                    <div class="season-block">
+                        <fieldset>
+                            <legend class="season-title season-title-2" align="center">Классический Стейк</legend>
+                            <div class="season-text">Окрошка – популярное блюдо русской кухни. Его название происходит от слова «крошить». Мелко нарезанные свежие овощи, залитые холодным квасом с добавлением мелко струганного мяса.</div>
+                            <div class="season-info">
+                            <div class="season-price">360, - &#8381</div>
+                            <div class="season-portion">250г/250 ккал.</div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.season-2 -->
+
+        <!-- Photo -->
+        <div class="photo" id="photo">
+            <div class="photo-inner">
+                <img class="photo-img" src="assets/img/photo/1.jpg" alt="">
+                <img class="photo-img" src="assets/img/photo/2.jpg" alt="">
+                <img class="photo-img" src="assets/img/photo/3.jpg" alt="">
+                <img class="photo-img" src="assets/img/photo/4.jpg" alt="">
+                <img class="photo-img" src="assets/img/photo/5.jpg" alt="">
+                <img class="photo-img" src="assets/img/photo/6.jpg" alt="">
+                <img class="photo-img" src="assets/img/photo/1.jpg" alt="">
+                <img class="photo-img" src="assets/img/photo/2.jpg" alt="">
+                <img class="photo-img" src="assets/img/photo/3.jpg" alt="">
+                <img class="photo-img" src="assets/img/photo/4.jpg" alt="">
+                <img class="photo-img" src="assets/img/photo/5.jpg" alt="">
+                <img class="photo-img" src="assets/img/photo/6.jpg" alt="">
+            </div>
+        </div><!-- /.photo -->
+
+        <!-- Map -->
+        <div class="map" id="map">
+            <div class="container">
+                <div class="map-inner">
+                    <h1 class="map-title">Рестораны</h1>
+
+                    <div class="map-block">
+                        <div class="map-col">
+                            <h1 class="map-col-title">Честный стейк</h1>
+                            <div class="map-col-address">Москва, Московский пр.186</div>
+                            <div class="map-col-tel">Тел. (+495) 373-03-43</div>
+                            <div class="map-col-work">
+                                <div class="map-col-work-title">Время работы:</div>
+                                <div class="map-col-work-time">
+                                    <div>
+                                        <p>Пн.-Пт.</p>
+                                        <p>11:00-23:00</p>
+                                    </div>
+                                    <div>
+                                        <p>Сб.</p>
+                                        <p>09:00-20:00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.map-col -->
+
+                        <div class="map-col">
+                            <h1 class="map-col-title">Че Гевара</h1>
+                            <div class="map-col-address">Санкт-Петербург, Каменноостровский пр., 62</div>
+                            <div class="map-col-tel">Тел. (+812) 657-12-58</div>
+                            <div class="map-col-work">
+                                <div class="map-col-work-title">Время работы:</div>
+                                <div class="map-col-work-time">
+                                    <div>
+                                        <p>Пн.-Пт.</p>
+                                        <p>11:00-23:00</p>
+                                    </div>
+                                    <div>
+                                        <p>Сб.</p>
+                                        <p>09:00-20:00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.map-col -->
+
+                        <div class="map-col">
+                            <h1 class="map-col-title">Стейкхауз</h1>
+                            <div class="map-col-address">Псков, Суворовский пр., 36,</div>
+                            <div class="map-col-tel">Тел. (+657) 577-29-68
+                            </div>
+                            <div class="map-col-work">
+                                <div class="map-col-work-title">Время работы:</div>
+                                <div class="map-col-work-time">
+                                    <div>
+                                        <p>Пн.-Пт.</p>
+                                        <p>11:00-23:00</p>
+                                    </div>
+                                    <div>
+                                        <p>Сб.</p>
+                                        <p>09:00-20:00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.map-col -->
+
+                    </div>
+                </div><!-- /.map-inner -->
+            </div>
+        </div><!-- /.map -->
+
+        <!-- Footer -->
+        <div class="footer" id="footer">
+            <div class="container">
+                <div class="footer-inner">
+                    <div class="footer-press">
+                        <h1 class="footer-press-title">Прессрум</h1>
+                        <div class="footer-press-block">
+                            <div class="footer-block-date">19 мая. 2015</div>
+                            <div class="footer-block-text">Компания Leicht Moscow, ресторанный холдинг Fresco Group и ресторан «Вилла Роза» дали старт новому совместному проекту.</div>
+                        </div>
+
+                        <div class="footer-press-block">
+                            <div class="footer-block-date">3 февраля. 2015</div>
+                            <div class="footer-block-text">Летняя веранда ресторана «Вилла Роза» среди лучших предложений Москвы в Resto.ru – поисковой системе для гурманов.</div>
+                        </div>
+
+                        <div class="footer-press-block">
+                            <div class="footer-block-date">7 сентября. 2015</div>
+                            <div class="footer-block-text">У нас новая винная карта. Надеемся, что среди многочисленных наименований Вы найдете свое любимое вино.</div>
+                        </div>
+                    </div><!-- /.footer-press -->
+                    <div class="footer-contacts">
+                        <h1 class="footer-contacts-title">Мы в соцсетях</h1>
+                        <div class="footer-icon">
+                            <a class="footer-icon-link" href="https://www.facebook.com/" target="_blank">
+                                <img src="assets/img/footer/facebook.png"  alt="">
+                            </a>
+                            <a class="footer-icon-link" href="https://www.twitter.com/" target="_blank">
+                                <img src="assets/img/footer/twitter.png"  alt="">
+                            </a>
+                            <a class="footer-icon-link" href="https://www.google.com/" target="_blank">
+                                <img src="assets/img/footer/google.png"  alt="">
+                            </a>
+                        </div>
+
+                        <div class="footer-contacts-subtitle">Рассылка спецпредложений</div>
+
+                        <form class="subscribe" action="/" method="post">
+                            <input class="subscribe-input" type="email" name="name" placeholder="Эл.почта">
+                            <button class="subscribe-button" type="submit">
+                                <img src="assets/img/footer/button.png" alt="">
+                            </button>
+                        </form>
+                    </div><!-- /.footer-contacts -->
+                </div><!-- /.footer-inner -->
+            </div>
+        </div><!-- /.footer -->
+
+        <!-- JavaScript -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="assets/js/app.js"></script>
+
+    </body>
+</html>
