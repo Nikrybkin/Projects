@@ -1,0 +1,445 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" initial-scale=1>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <title>Singleton</title>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/image/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/image/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/image/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/image/favicon/site.webmanifest">
+        <link rel="mask-icon" href="assets/image/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <meta name="description" content="Описание страницы" />
+        <meta name="keywords" content="создание сайтов, ключевые слова">
+        <meta name="google" content="notranslate" />
+
+        <script src="assets/js/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    </head>
+    <body>
+
+        <!--- Svg -->
+        <svg style="display: none;">
+            <symbol id="btn" width="65" height="65" viewBox="0 0 65 65">
+                <path d="M23.5258 34.1905H37.9502L34.0484 38.0924C32.9277 39.2131 34.6088 40.8941 35.7295 39.7734L39.283 36.2144L41.6552 33.8385C42.1149 33.376 42.1149 32.6291 41.6552 32.1666L35.7295 26.2341C35.5041 26.0024 35.1938 25.8724 34.8705 25.8751C33.8032 25.8753 33.2794 27.1752 34.0484 27.9153L37.9595 31.8171H23.4645C21.8208 31.8987 21.9435 34.2723 23.5258 34.1905Z"/>
+            </symbol>
+
+            <symbol id="api-btn" width="20" height="16" viewBox="0 0 20 16">
+                <path d="M1.24142 9.19043H15.6658L11.764 13.0923C10.6432 14.213 12.3244 15.894 13.4451 14.7733L16.9986 11.2143L19.3707 8.83844C19.8305 8.37596 19.8305 7.62904 19.3707 7.16655L13.4451 1.23401C13.2197 1.00234 12.9094 0.872352 12.586 0.875041C11.5188 0.875175 10.995 2.17511 11.764 2.91519L15.675 6.81703H1.18006C-0.463632 6.89858 -0.340904 9.27225 1.24142 9.19043Z" fill="white"/>
+            </symbol>
+
+            <symbol id="play" width="28" height="28" viewBox="0 0 28 28">
+                <path d="M14 0C6.26812 0 0 6.26801 0 14C0 21.732 6.26812 28 14 28C21.7319 28 28 21.732 28 14C28 6.26801 21.7319 0 14 0ZM18.8388 14.7421L11.8387 19.1171C11.6971 19.2055 11.5361 19.25 11.375 19.25C11.2291 19.25 11.083 19.2137 10.9507 19.1402C10.6726 18.986 10.5 18.6933 10.5 18.375V9.625C10.5 9.30672 10.6726 9.01403 10.9507 8.85981C11.2289 8.70472 11.569 8.71412 11.8387 8.88289L18.8388 13.2579C19.0945 13.4181 19.25 13.6984 19.25 14C19.25 14.3016 19.0945 14.5819 18.8388 14.7421Z">
+            </symbol>
+
+            <symbol id="twitter" width="17" height="14" viewBox="0 0 17 14">
+                <path d="M16.98 2.04C16.38 2.3 15.76 2.48 15.1 2.56C15.78 2.16 16.3 1.52 16.54 0.74C15.9 1.12 15.2 1.38 14.46 1.54C13.86 0.9 13 0.5 12.06 0.5C10.24 0.5 8.78 1.98 8.78 3.78C8.78 4.04 8.8 4.28 8.86 4.52C6.14 4.4 3.74 3.08 2.12 1.1C0.959996 3.18 2.26 4.9 3.12 5.48C2.6 5.48 2.08 5.32 1.64 5.08C1.64 6.7 2.78 8.04 4.26 8.34C3.94 8.44 3.22 8.5 2.78 8.4C3.2 9.7 4.42 10.66 5.84 10.68C4.72 11.56 3.08 12.26 0.979996 12.04C2.44 12.98 4.16 13.52 6.02 13.52C12.06 13.52 15.34 8.52 15.34 4.2C15.34 4.06 15.34 3.92 15.32 3.78C16 3.28 16.56 2.7 16.98 2.04Z">
+            </symbol>
+
+            <symbol id="youtube" width="17" height="14" viewBox="0 0 17 14">
+                <path d="M12.98 0.279785H3.02C1.34 0.279785 0 1.63979 0 3.29979V8.67979C0 10.3598 1.36 11.6998 3.02 11.6998H12.98C14.66 11.6998 16 10.3398 16 8.67979V3.29979C16 1.63979 14.64 0.279785 12.98 0.279785ZM5.9 8.45979V3.53979L10.1 5.99979L5.9 8.45979Z">
+            </symbol>
+
+        </svg>
+
+        <!-- Header -->
+        <header class="header wow animate__animated animate__fadeInDown" id="header">
+            <div class="container">
+                <div class="header-inner">
+
+                    <div class="header-logo">
+                        <img src="assets/image/header/logo.svg" alt="">
+                    </div><!-- /.header-logo -->
+
+                    <div class="nav" id="nav">
+                        <a class="nav-link" href="#" data-scroll="#intro">About</a>
+                        <a class="nav-link" href="#" data-scroll="#save">Services</a>
+                        <a class="nav-link" href="#" data-scroll="#invite">Projects</a>
+                        <a class="nav-link" href="#" data-scroll="#footer">Contacts</a>
+                        <a class="nav-link nav-link-mobile" href="#popup" data-scroll="#footer">Login in</a>
+                        <a class="nav-link nav-link-mobile" href="#popup" data-scroll="#footer">Sign Up</a>
+                    </div><!-- /.nav -->
+
+                    <div class="header-authorization">
+                        <a class="login" href="#popup-login">Login in</a>
+                        <a class="sign" href="#popup-sign">Sign up</a>
+                    </div><!-- /.header-authorization -->
+
+                    <button class="nav-toggle" type="button" id="navToggle">
+                        <span class="nav-toggle-item">Menu</span>
+                    </button>
+
+                </div><!-- /.header-inner -->
+            </div>
+        </header><!-- /.header -->
+
+        <!-- Intro -->
+        <main class="intro" id="intro">
+            <div class="container">
+                <div class="intro-inner">
+
+                    <div class="intro-content wow animate__animated animate__fadeInLeft">
+                        <h1 class="intro-title">Make more time for the work that matters most</h1>
+
+                        <div class="intro-subtitle">Create screens directly in Singleton or add your images from Sketch or Figma. You can even sync designs from your cloud storage!</div>
+
+                        <form class="form" action="/" method="post">
+                            <input class="input-intro" type="email" name="name" placeholder="Type your e-mail">
+                            <button class="btn-intro" type="submit">Get Started</button>
+                        </form>
+                    </div><!-- /.intro-content -->
+
+                    <div class="intro-image wow animate__animated animate__fadeInRight">
+                        <img class="intro-img" src="assets/image/intro/people.png" alt="">
+                    </div><!-- /.intro-image -->
+
+                </div><!-- /.intro-inner -->
+            </div>
+        </main><!-- /.intro -->
+
+        <!-- Company -->
+        <div class="company wow animate__animated animate__fadeIn" id="company">
+            <div class="container">
+                <div class="company-inner">
+                    <img  class="company-img" src="assets/image/company/1.svg" alt="">
+                    <img  class="company-img" src="assets/image/company/2.svg" alt="">
+                    <img  class="company-img" src="assets/image/company/3.svg" alt="">
+                    <img  class="company-img" src="assets/image/company/4.svg" alt="">
+                    <img  class="company-img" src="assets/image/company/5.svg" alt="">
+                    <img  class="company-img" src="assets/image/company/6.svg" alt="">
+                </div><!-- /.company-inner -->
+            </div>
+        </div><!-- /.company -->
+
+        <!-- Save -->
+        <div class="save" id="save">
+            <div class="container">
+                <div class="save-inner">
+                    <h1 class="save-title wow animate__animated animate__fadeIn">Save time managin social media for your business</h1>
+
+                    <div class="save-content">
+
+                        <div class="animate wow animate__animated animate__fadeInLeft">
+                            <div class="save-block">
+                            <div class="save-image">
+                                <img class="save-img" src="assets/image/save/block-1.svg" alt="">
+                            </div>
+                            <h1 class="save-block-title">Security Management</h1>
+                            <div class="save-block-text">It is a long established fact that a reader will be distracted by the readable content</div>
+                            <a class="save-button">
+                                <svg class="save-btn">
+                                    <use xlink:href="#btn"></use>
+                                </svg>
+                            </a>
+                            </div><!-- /.save-block -->
+
+                            <div class="save-block">
+                            <div class="save-image">
+                                <img class="save-img" src="assets/image/save/block-2.svg" alt="">
+                            </div>
+                            <h1 class="save-block-title">Diigital Agency</h1>
+                            <div class="save-block-text">It is a long established fact that a reader will be distracted by the readable content</div>
+                            <a class="save-button">
+                                <svg class="save-btn">
+                                    <use xlink:href="#btn"></use>
+                                </svg>
+                            </a>
+                            </div><!-- /.save-block -->
+
+                            <div class="save-block">
+                            <div class="save-image">
+                                <img class="save-img" src="assets/image/save/block-3.svg" alt="">
+                            </div>
+                            <h1 class="save-block-title">API Reference</h1>
+                            <div class="save-block-text">It is a long established fact that a reader will be distracted by the readable content</div>
+
+                                <a class="save-button">
+                                    <svg class="save-btn">
+                                        <use xlink:href="#btn"></use>
+                                    </svg>
+                                </a>
+                            </div><!-- /.save-block -->
+                        </div>
+
+                        <div class="animate wow animate__animated animate__fadeInRight">
+                            <div class="save-block">
+                                <div class="save-image">
+                                    <img class="save-img" src="assets/image/save/block-4.svg" alt="">
+                                </div>
+                                <h1 class="save-block-title">Team Accounts</h1>
+                                <div class="save-block-text">It is a long established fact that a reader will be distracted by the readable content</div>
+                                <a class="save-button">
+                                    <svg class="save-btn">
+                                        <use xlink:href="#btn"></use>
+                                    </svg>
+                                </a>
+                            </div><!-- /.save-block -->
+
+                            <div class="save-block">
+                                <div class="save-image">
+                                    <img class="save-img" src="assets/image/save/block-5.svg" alt="">
+                                </div>
+                                <h1 class="save-block-title">User Administration</h1>
+                                <div class="save-block-text">It is a long established fact that a reader will be distracted by the readable content</div>
+                                <a class="save-button">
+                                    <svg class="save-btn">
+                                        <use xlink:href="#btn"></use>
+                                    </svg>
+                                </a>
+                            </div><!-- /.save-block -->
+
+                            <div class="save-block">
+                                <div class="save-image">
+                                    <img class="save-img" src="assets/image/save/block-6.svg" alt="">
+                                </div>
+                                <h1 class="save-block-title">Email Marketing</h1>
+                                <div class="save-block-text">It is a long established fact that a reader will be distracted by the readable content</div>
+
+                                    <a class="save-button">
+                                        <svg class="save-btn">
+                                            <use xlink:href="#btn"></use>
+                                        </svg>
+                                    </a>
+                            </div><!-- /.save-block -->
+                        </div>
+
+                    </div><!--- /.save-content -->
+
+                    <div class="save-explore">
+                        <h2 class="save-subtitle">Create screens directly in Singleton or add your images from Sketch or Figma. You can even sync designs from your cloud storage!</h2>
+                        <a class="btn-intro btn-explore" type="submit">Explore All Features</a>
+
+                    </div>
+
+                </div><!-- /.save-inner -->
+            </div>
+        </div><!-- /.save -->
+
+        <!-- Api -->
+        <div class="api" id="api">
+            <div class="container">
+                <div class="api-inner">
+
+                    <div class="api-image wow animate__animated animate__fadeInLeft">
+                        <img class="api-img" src="assets/image/api/image.png" alt="">
+                    </div><!-- /.api-image -->
+
+                    <div class="api-content wow animate__animated animate__fadeInRight">
+                        <div class="api-subtitle">
+                            <img class="api-icon" src="assets/image/api/icon.svg" alt="">
+                            <p>API Reference</p>
+                        </div>
+                        <div class="api-title">We believe in helping people pay attention to what matters</div>
+                        <a class="btn-intro btn-explore btn-api" type="submit">
+                            <p>Explore All Features</p>
+                            <svg class="api-btn">
+                                <use xlink:href="#api-btn"></use>
+                            </svg>
+                        </a>
+                    </div><!-- /.api-content -->
+
+                </div><!-- /.api-inner -->
+            </div>
+        </div><!-- /.api -->
+
+        <!-- Invite -->
+        <div class="invite" id="invite">
+            <div class="container">
+                <div class="invite-inner">
+                    <h1 class="invite-title wow animate__animated animate__fadeIn">Invite friends &amp; earn rewards</h1>
+
+                    <a class="invite-subtitle" href="#popup-video">
+                        <svg class="invite-play">
+                            <use xlink:href="#play"></use>
+                        </svg>
+                        <p>Play Introduction Video</p>
+                    </a>
+
+                    <div class="invite-block">
+                        <div class="invite-phone wow animate__animated animate__fadeInLeft">
+                            <img class="phone-img" src="assets/image/invite/phone.jpg" alt="">
+                        </div><!-- /.invite-phone -->
+                        <div class="invite-image wow animate__animated animate__fadeInRight">
+                            <img class="invite-img" src="assets/image/invite/art.jpg" alt="">
+                        </div><!-- /.invite-image -->
+                    </div><!-- /.invite-block -->
+
+                    <div class="invite-text">Create screens directly in Singleton or add your images from Sketch or Figma. You can even sync designs from your cloud storage!</div>
+
+                </div><!-- /.invite-inner -->
+            </div>
+        </div><!-- /.invite -->
+
+        <!-- Build -->
+        <div class="build" id="build">
+            <div class="container">
+                <div class="build-inner">
+                    <div class="build-title wow animate__animated animate__fadeIn">Build the right plan for your team</div>
+                    <div class="build-block wow animate__animated animate__fadeInUp">
+                        <div class="build-column">
+                            <h2 class="column-subtitle">Starter</h2>
+                            <h1 class="column-title title-free">Free</h1>
+                            <p class="column-text">1 Non-Commercial Site</p>
+                            <p class="column-text">100 GB System Storage</p>
+                            <p class="column-text">Singleton Branding</p>
+                            <a class="column-link" href="">Select Plan</a>
+                        </div><!-- /.build-column -->
+
+                        <div class="build-column">
+                            <h2 class="column-subtitle">Singleton Plus</h2>
+                            <h1 class="column-title">$39<span>/month</span></h1>
+                            <p class="column-text">10 Non-Commercial Site</p>
+                            <p class="column-text">500 GB System Storage</p>
+                            <p class="column-text">Custom Branding</p>
+                            <a class="column-link" href="">Select Plan</a>
+                        </div><!-- /.build-column -->
+
+                        <div class="build-column">
+                            <h2 class="column-subtitle">Singleton Pro</h2>
+                            <h1 class="column-title">$99<span>/month</span></h1>
+                            <p class="column-text">30 Non-Commercial Site</p>
+                            <p class="column-text">1TB System Storage</p>
+                            <p class="column-text">Singleton Branding</p>
+                            <a class="column-link" href="">Select Plan</a>
+                        </div><!-- /.build-column -->
+
+                    </div><!-- /.build-block -->
+                    <div class="build-text">Create screens directly in Singleton or add your images from Sketch or Figma. You can even sync designs from your cloud storage!</div>
+                </div><!-- /.build-inner -->
+            </div>
+        </div><!-- /.build -->
+
+        <!-- Footer -->
+        <div class="footer" id="footer">
+            <div class="container">
+                <div class="footer-inner wow animate__animated animate__fadeInUp">
+
+                    <div class="footer-top">
+                        <div class="footer-block">
+                            <img class="footer-logo" src="assets/image/footer/logo.png" alt="">
+                        </div>
+                        <div class="footer-block footer-block-logo">
+                            <h2 class="footer-subtitle">Learn</h2>
+                            <p class="footer-text" >Our Courses</p>
+                            <p class="footer-text" >The Programme</p>
+                            <p class="footer-text" >The Course</p>
+                            <p class="footer-text" >F.A.Q.</p>
+                        </div>
+                        <div class="footer-block">
+                            <h2 class="footer-subtitle">Hire</h2>
+                            <p class="footer-text" >Our Talent</p>
+                            <p class="footer-text" >Freelancers</p>
+                            <p class="footer-text" >Trainees</p>
+                        </div>
+                        <div class="footer-block">
+                            <h2 class="footer-subtitle">About</h2>
+                            <p class="footer-text" >Our Mission</p>
+                            <p class="footer-text" >Our Story</p>
+                            <p class="footer-text" >Our Culture</p>
+                            <p class="footer-text" >The Team</p>
+                        </div>
+                        <div class="footer-block">
+                            <h2 class="footer-subtitle">Blog</h2>
+                            <p class="footer-text" >Business Stories</p>
+                            <p class="footer-text" >Digital Mums</p>
+                            <p class="footer-text" >Learning</p>
+                            <p class="footer-text" >Social Media</p>
+                        </div>
+                    </div><!-- /.footer-top -->
+
+                    <div class="footer-bottom">
+                        <div class="footer-form">
+                            <form class="form" action="/" method="post">
+                                <input class="input-intro" type="email" name="name" placeholder="Type your e-mail">
+                                <button class="btn-intro" type="submit">Get Started</button>
+                            </form>
+                        </div><!-- /.footer-form -->
+
+                        <div class="footer-link">
+                            <a  href="https://twitter.com" target="_blank" >
+                                <svg class="footer-icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a href="https://youtube.com" target="_blank" >
+                                <svg class="footer-icon">
+                                    <use xlink:href="#youtube"></use>
+                                </svg>
+                            </a>
+
+                        </div>
+                    </div><!-- /.footer-bottom -->
+
+                </div><!-- /.footer-inner -->
+            </div>
+        </div><!-- /.footer -->
+
+        <!-- Popup -->
+        <div class="popup" id="popup-login">
+            <a href="#header" class="popup-area"></a>
+            <div class="popup-inner">
+                <div class="popup-content">
+                    <a href="#header" class="popup-close">
+                        <img class="close-img" src="assets/image/popup/close.svg" alt="">
+                    </a>
+                    <form class="popup-form" action="/">
+                        <h1 class="popup-form-title">Вход</h1>
+                        <div class="popup-form-create">Новый пользователь? <a href="#popup-sign">Создай аккаунт</a></div>
+                        <input class="form-input" type="email" name="email" placeholder="Ваш e-mail">
+                        <input class="form-input" type="password" name="password" placeholder="Ваш пароль">
+                        <button class="popup-btn" type="submit" disabled="">Войти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="popup-sign">
+            <a href="#header" class="popup-area"></a>
+            <div class="popup-inner">
+                <div class="popup-content">
+                    <a href="#header" class="popup-close">
+                        <img class="close-img" src="assets/image/popup/close.svg" alt="">
+                    </a>
+                    <form class="popup-form" action="/">
+                        <h1 class="popup-form-title">Регистрация</h1>
+                        <div class="popup-form-create">Есть аккаунт? <a href="#popup-login">Перейти</a></div>
+                        <input class="form-input" type="text" name="name" placeholder="Ваше имя">
+                        <input class="form-input" type="text" name="surname" placeholder="Ваша фамилия">
+                        <input class="form-input" type="email" name="email" placeholder="Ваш e-mail">
+                        <input class="form-input" type="password" name="password" placeholder="Ваш пароль">
+                        <button class="popup-btn" type="submit" disabled="">Войти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="popup-video" >
+            <a href="" class="popup-area"></a>
+            <div class="popup-inner">
+                <div class="popup-content content-video">
+                    <a href="#header" class="popup-close close-video">
+                        <img class="close-img" src="assets/image/popup/close.svg" alt="">
+                    </a>
+                    <iframe width="700" height="530" src="https://www.youtube.com/embed/fb_ZeYpHRCU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Script -->
+        <script src="assets/js/app.js"></script>
+
+    </body>
+</html>
